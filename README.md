@@ -3,4 +3,6 @@
 Un simulador de circuitos electricos con resistencias,
 circuitos en serie y en paralelo.
 
-> Hecho por mi ^_^ 
+> Hecho por mi 
+
+# ^_^ 

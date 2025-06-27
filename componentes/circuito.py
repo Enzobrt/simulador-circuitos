@@ -1,17 +1,23 @@
+from componentes import Resistencia
+
+
 class Circuito:
     """Clase generica para representar un circuito"""
 
     def __init__(self):
-        pass
+        self.elementos: list[Circuito | Resistencia]
+        self.resistencia: float
+        self.corriente: float
+        self.voltaje: float
 
     def calcular_resistencia(self) -> float:
         """Calcula la resistencia del circuito en ohmnios"""
-        pass
+        ...
 
     def calcular_corriente(self) -> float:
         """Calcula la corriente del circuito en amperios"""
-        pass
+        ...
 
     def calcular_voltaje(self) -> float:
         """Calcula el voltaje del circuito en voltios"""
-        pass
+        ...

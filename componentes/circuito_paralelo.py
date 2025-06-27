@@ -1,11 +1,10 @@
-from componentes import Circuito
-from componentes import Resistencia
+from componentes import Circuito, Resistencia
 
 
 class CircuitoParalelo(Circuito):
     """Clase para representar un circuito en paralelo"""
 
-    def __init__(self, elementos: list[Resistencia], voltaje: float):
+    def __init__(self, elementos: list[Circuito | Resistencia], voltaje: float):
         self.elementos = elementos
         self.resistencia = self.calcular_resistencia()
         self.voltaje = voltaje
@@ -20,8 +19,8 @@ Voltaje total: {self.voltaje} V"""
         """Calcula la resistencia del circuito en ohmnios"""
         resistencia_total = 0
         for elem in self.elementos:
-            resistencia_total += 1/elem.valor
-        return 1/resistencia_total
+            resistencia_total += 1 / elem.resistencia
+        return 1 / resistencia_total
 
     def calcular_corriente(self) -> float:
         """Calcula la corriente del circuito en amperios"""

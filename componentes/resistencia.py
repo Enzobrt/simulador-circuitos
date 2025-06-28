@@ -1,5 +1,5 @@
 class Resistencia:
     """Clase que representa una resistencia"""
 
-    def __init__(self, valor: float):
-        self.valor = valor
+    def __init__(self, resistencia: float):
+        self.resistencia = resistencia
